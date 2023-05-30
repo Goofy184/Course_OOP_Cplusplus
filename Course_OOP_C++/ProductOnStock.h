@@ -1,33 +1,35 @@
-#pragma once
-#include <iostream>
-using namespace std;
+#pragma once 
+
+#include <iostream> 
+using namespace std; 
+
 class ProductOnStock {
 protected:
-    string productName;
-    string manufacturingDate;
+    string productName; 
+    string manufacturingDate; 
     string qualityCertificate;
-    double cost;
+    double cost; 
 
 public:
     ProductOnStock(string name, string date, string certificate, double cost);
-    ~ProductOnStock();
+    ~ProductOnStock(); 
 
-    void setProductName(string name);
-    void setManufacturingDate(string date);
-    void setQualityCertificate(string certificate);
-    void setCost(double cost);
+    void setProductName(string name); 
+    void setManufacturingDate(string date); 
+    void setQualityCertificate(string certificate); 
+    void setCost(double cost); 
 
-    string getProductName();
-    string getManufacturingDate();
-    string getQualityCertificate();
-    double getCost() const;
+    string getProductName(); 
+    string getManufacturingDate(); 
+    string getQualityCertificate(); 
+    double getCost() const; 
 
-    virtual double getPrice();
+    virtual double getPrice(); 
 
-    ProductOnStock& operator+=(double value);
-    ProductOnStock& operator-=(double value);
-    ProductOnStock& operator=(const ProductOnStock& other);
+    ProductOnStock& operator+=(double value); 
+    ProductOnStock& operator-=(double value); 
+    ProductOnStock& operator=(const ProductOnStock& other); 
 
-    friend istream& operator>>(istream& in, ProductOnStock& product);
-    friend ostream& operator<<(ostream& out, const ProductOnStock& product);
+    friend istream& operator>>(istream& in, ProductOnStock& product); 
+    friend ostream& operator<<(ostream& out, const ProductOnStock& product); 
 };

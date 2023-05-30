@@ -1,12 +1,14 @@
-#include "ProductOnStock.h"
-
+#include "ProductOnStock.h" 
 ProductOnStock::ProductOnStock(string name, string date, string certificate, double cost)
-    : productName(name), manufacturingDate(date), qualityCertificate(certificate), cost(cost) {}
+    : productName(name), 
+    manufacturingDate(date), 
+    qualityCertificate(certificate), 
+    cost(cost) {} 
 
 ProductOnStock::~ProductOnStock() {}
 
 void ProductOnStock::setProductName(string name) {
-    productName = name;
+    productName = name; 
 }
 
 void ProductOnStock::setManufacturingDate(string date) {
@@ -18,7 +20,7 @@ void ProductOnStock::setQualityCertificate(string certificate) {
 }
 
 void ProductOnStock::setCost(double cost) {
-    this->cost = cost;
+    this->cost = cost; 
 }
 
 string ProductOnStock::getProductName() {
@@ -30,29 +32,29 @@ string ProductOnStock::getManufacturingDate() {
 }
 
 string ProductOnStock::getQualityCertificate() {
-    return qualityCertificate;
+    return qualityCertificate; 
 }
 
 double ProductOnStock::getCost() const {
-    return cost;
+    return cost; 
 }
 
 double ProductOnStock::getPrice() {
-    return cost;
+    return cost; 
 }
 
 ProductOnStock& ProductOnStock::operator+=(double value) {
-    cost += value;
-    return *this;
+    cost += value; 
+    return *this; 
 }
 
 ProductOnStock& ProductOnStock::operator-=(double value) {
-    cost -= value;
-    return *this;
+    cost -= value; 
+    return *this; 
 }
 
 ProductOnStock& ProductOnStock::operator=(const ProductOnStock& other) {
-    if (this == &other) return *this;
+    if (this == &other) return *this; 
     productName = other.productName;
     manufacturingDate = other.manufacturingDate;
     qualityCertificate = other.qualityCertificate;
