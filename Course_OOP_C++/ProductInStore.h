@@ -4,6 +4,7 @@
 
 class ProductInStore : public ProductOnStock {
 protected:
+
     double markup; 
     string expirationDate; 
 

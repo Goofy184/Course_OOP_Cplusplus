@@ -1,6 +1,7 @@
 #pragma once 
 
 #include <iostream> 
+#include <boost/date_time/gregorian/gregorian.hpp>
 using namespace std; 
 
 class ProductOnStock {
@@ -9,6 +10,7 @@ protected:
     string manufacturingDate; 
     string qualityCertificate;
     double cost; 
+    void validateDate(string date);
 
 public:
     ProductOnStock(string name, string date, string certificate, double cost);
@@ -33,3 +35,5 @@ public:
     friend istream& operator>>(istream& in, ProductOnStock& product); 
     friend ostream& operator<<(ostream& out, const ProductOnStock& product); 
 };
+
+

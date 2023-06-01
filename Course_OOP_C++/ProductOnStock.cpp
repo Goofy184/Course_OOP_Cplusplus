@@ -1,9 +1,16 @@
 #include "ProductOnStock.h" 
+
+
+void ProductOnStock::validateDate(string date)
+{
+    boost::gregorian::from_string(date);
+}
 ProductOnStock::ProductOnStock(string name, string date, string certificate, double cost)
     : productName(name), 
-    manufacturingDate(date), 
     qualityCertificate(certificate), 
-    cost(cost) {} 
+    cost(cost) {
+    setManufacturingDate(date);
+}
 
 ProductOnStock::~ProductOnStock() {}
 
@@ -12,6 +19,7 @@ void ProductOnStock::setProductName(string name) {
 }
 
 void ProductOnStock::setManufacturingDate(string date) {
+    validateDate(date);
     manufacturingDate = date;
 }
 

@@ -1,11 +1,7 @@
 #include "Store.h" 
-
-Store::Store() {
-}
+Store::Store() {}
 
 Store::~Store() {}
-
-
 void Store::addProduct(const ProductInStore& product) {
 	products.push_back(product); 
 }
